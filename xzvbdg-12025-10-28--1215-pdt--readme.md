@@ -1,7 +1,7 @@
 # grainflow - deploy everywhere with one command
 
 **grainorder:** `xzvbdg`  
-**grainbranch:** `12025-10-28--1215-PDT--moon-uttashsdh-asc-arie23-sun-12h--teamtravel12`  
+**grainbranch:** `12025-10-28--1130-PDT--moon-uttaradha-asc-arie23-sun-12h--teamtravel12`  
 **team:** team 12 - travel (pisces ♓ / xii. the hanged man)  
 **voice:** glow g2 (patient teacher) + trish (enthusiastic flow)  
 
@@ -30,7 +30,7 @@ does this sound useful? let me show you how it works...
 
 ```bash
 # in your project directory
-bb flow "your commit message"
+steel flow "your commit message"
 ```
 
 that's it! grainflow will:
@@ -59,7 +59,7 @@ ln -s ../grainflow/bb.edn bb.edn
 git remote add codeberg https://codeberg.org/yourusername/yourrepo.git
 
 # flow!
-bb flow "first flow!"
+steel flow "first flow!"
 ```
 
 ---
@@ -157,7 +157,7 @@ git push codeberg main         # push to codeberg
 
 ```bash
 # the grainflow way! ✨
-bb flow "update"
+steel flow "update"
 ```
 
 one command. both platforms. both pages deployments. atomic. never forget a step.
@@ -267,7 +267,7 @@ never! grainflow is **append-only**. it only adds commits, never rewrites histor
 
 ### q: what if i have conflicts?
 
-grainflow will stop and tell you. resolve conflicts manually, then run `bb flow` again.
+grainflow will stop and tell you. resolve conflicts manually, then run `steel flow` again.
 
 ### q: can i use this for smart contracts?
 
@@ -378,7 +378,7 @@ the hanged man hangs willingly. we automate willingly. freedom through surrender
 
 imagine:
 ```bash
-bb flow:chains "update marketplace contract"
+steel flow:chains "update marketplace contract"
 ```
 
 flows your contract to icp + hedera + solana + github + codeberg. all verified. all immutable. all live. **that's the vision!** 🚀
@@ -410,7 +410,7 @@ mit license - use freely, build freely, flow freely! 🌊
 ## 🔗 links
 
 - **repo:** https://github.com/teamtravel12/grainflow
-- **grainbranch:** `12025-10-28--1215-PDT--moon-uttashsdh-asc-arie23-sun-12h--teamtravel12`
+- **grainbranch:** `12025-10-28--1130-PDT--moon-uttaradha-asc-arie23-sun-12h--teamtravel12`
 - **main docs:** https://github.com/teamtravel12/teamtravel12
 - **tutorial:** https://github.com/teamtravel12/teamtravel12/blob/main/xzvbdg-12025-10-28--1130-pdt--graintime-grainbranch-tutorial.md
 
