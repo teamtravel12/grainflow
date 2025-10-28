@@ -51,9 +51,9 @@ that's it! grainflow will:
 # clone grainflow
 git clone https://github.com/teamtravel12/grainflow.git
 
-# link to your project (or copy bb.edn)
+# link to your project
 cd your-project
-ln -s ../grainflow/bb.edn bb.edn
+ln -s ../grainflow/grainflow.scm grainflow.scm
 
 # add remotes for codeberg (if not already added)
 git remote add codeberg https://codeberg.org/yourusername/yourrepo.git
@@ -174,11 +174,11 @@ does this distinction make sense? it's subtle but important! 🌊
 
 ## 🛠️ how it works (technical)
 
-grainflow is written in **babashka** (clojure scripting). here's the simplified flow:
+grainflow is written in **steel** (scheme on rust). here's the simplified flow:
 
-```clojure
-(defn flow [message]
-  "deploy everywhere with one command"
+```steel
+;; deploy everywhere with one command
+(define (flow message)
   (->
     (build-content)           ; compile/build if needed
     (commit-changes message)  ; git commit
@@ -191,40 +191,24 @@ grainflow is written in **babashka** (clojure scripting). here's the simplified 
 
 **that's the whole thing!** no hidden complexity. no mysterious magic. just composed functions doing one thing each.
 
-read the source: it's simple shell commands wrapped in clojure functions. hacker-readable. homebrew-friendly.
-
----
-
-## 🔄 babashka → steel migration
-
-grainflow currently uses **babashka** (clojure on graalvm). we're migrating to **steel** (scheme on rust) for the pure rust+steel stack.
-
-**current status:** babashka works great! steel version coming in phase 2.
-
-**why steel?**
-- pure rust (no jvm)
-- r5rs scheme (lisp elegance)
-- fast compilation
-- embeddable
-- grain network standard
-
-for now, use babashka. when steel version ships, you'll have both options!
+read the source: it's simple shell commands wrapped in steel functions. hacker-readable. homebrew-friendly.
 
 ---
 
 ## 📋 requirements
 
-- **babashka** (https://babashka.org/) - clojure scripting
+- **steel** (https://github.com/mattwparas/steel) - rust scheme lisp
 - **git** - version control
 - **github account** - for github pages
 - **codeberg account** (optional) - for codeberg pages
 
 ```bash
-# install babashka (mac/linux)
-bash < <(curl -s https://raw.githubusercontent.com/babashka/babashka/master/install)
+# install steel (cargo)
+cargo install steel-interpreter
 
-# or on arch linux
-sudo pacman -S babashka
+# or build from source
+git clone https://github.com/mattwparas/steel.git
+cd steel && cargo build --release
 ```
 
 ---
@@ -245,7 +229,7 @@ sudo pacman -S babashka
 
 ## 🎨 customization
 
-edit `bb.edn` to customize:
+edit `grainflow.scm` to customize:
 - build commands
 - deployment targets
 - branch names
@@ -362,10 +346,9 @@ the hanged man hangs willingly. we automate willingly. freedom through surrender
 ### phase 1 (current)
 - ✅ github + codeberg deployment
 - ✅ pages automation
-- ✅ babashka implementation
+- ✅ steel implementation
 
 ### phase 2 (in progress)
-- 🚧 steel implementation
 - 🚧 graintime integration
 - 🚧 graindb logging
 - 🚧 grainui visualization
